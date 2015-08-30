@@ -1,0 +1,51 @@
+ <template name="layout">
+       <div class="container">
+    <header>
+      <center>
+      <h1 style="color:red">测试清单</h1> <br>
+      <div> (总共:
+        <a style="color:red">{{totalCount}}</a>条，未完成:联调
+        <a style="color:red">{{ltincompleteCount}}</a>条,功能
+        <a style="color:red">{{incompleteCount}}</a>条,不通过
+        <a style="color:red">{{failCount}}</a>条)
+        <label class="hide-completed">
+        隐藏完成清单：
+        <input type="checkbox" checked="{{hideCompleted}}" />
+      </label>
+      <input type="button" value="detail"/>
+      </div>
+      <div></div>
+      </center>
+      {{> select}}      
+    </header>
+
+  </div>
+     
+</template>
+
+<template name="select">
+	<center>
+       <form name="SelectVersion" class="SelectVersion">
+            <label for="vermon">版本月:</label>
+            <select name="vermon" id="vermon" class="vermon">
+		            <option>--Select--</option>
+                {{#each vermons}}
+                        <option value="{{this}}">{{this}}</option>
+                 {{/each}}
+            </select>
+            <label for="verno">&nbsp;&nbsp;&nbsp;版本号:</label>
+            <select name="verno" id="verno" class="verno">
+		                <option>---Select---</option>
+                    {{#each vernos}}
+                        <option value="{{verno}}">{{verno}}</option>
+                    {{/each}}
+            </select>
+            <label for="search">&nbsp;&nbsp;&nbsp;</label>
+            <input type="text"  class="searchtext" name="search" placeholder="输入关键字"/>
+            <input type="button" class="searchbtn" value="搜索"/>
+        </form>
+	</center>
+  
+  <br><br>
+  {{> tasklist}}
+</template>

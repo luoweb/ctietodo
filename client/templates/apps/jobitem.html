@@ -1,0 +1,20 @@
+<template name="jobitem">
+  
+  <li>
+    <a class="chkboxs">
+    <label style="color:red"><input type="checkbox" style="color:red" checked="{{chklt}}" class="toggle-chklt" />todo</label>
+    <label style="color:green"><input type="checkbox" checked="{{checked}}" class="toggle-checked" />doing</label>
+    <label style="color:blue"><input type="checkbox" checked="{{chkfail}}" class="toggle-chkfail" />done</label>
+    </a>
+    <span class="text"><strong>{{appname}}-{{jobname}}</strong></span>
+    <span class="coder">{{plantime}}</span>
+    <input class="codebtn" type="button" value="Code"/>
+    <!--<a href="#openModal">Open Modal</a>-->
+    <!--{{> parent}}-->
+    
+  </li>
+    <span style="word-wrap : break-word;white-space: pre-wrap" class="detail">{{jobdetail}}</span>
+    <pre style="height:120px;display:none;color:gray" class="codedetail">
+        {{jobdetail}}
+    </pre>
+</template>

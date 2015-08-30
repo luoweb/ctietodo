@@ -1,0 +1,20 @@
+[[[[[ ~/ctie/ctietodo ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3000/
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)=> Client modified -- refreshing (x7)=> Client modified -- refreshing (x8)
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)

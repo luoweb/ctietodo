@@ -1,0 +1,59 @@
+ <template name="applist">
+       <div class="container">
+    <header>
+      <center>
+      <h1 style="color:red">任务清单</h1> <br>
+      <div> (总共:
+        <a style="color:red">{{totalCount}}</a>条，未完成:TODO
+        <a style="color:red">{{ltincompleteCount}}</a>条,DOING
+        <a style="color:red">{{incompleteCount}}</a>条,DONE
+        <a style="color:red">{{failCount}}</a>条)
+        <label class="hide-completed">
+        隐藏完成清单：
+        <input type="checkbox" checked="{{hideCompleted}}" />
+      </label>
+      <!--<input type="button" value="detail"/>-->
+      </div>
+      <div></div>
+      </center>
+      {{> selectapp}}      
+    </header>
+
+  </div>
+     
+</template>
+
+<template name="selectapp">
+	<center>
+       <form name="SelectApp" class="SelectApp">
+            <label for="app">应用:</label>
+            <select name="app" id="app" class="app">
+		            <option>--Select--</option>
+                {{#each apps}}
+                        <option value="{{this}}">{{this}}</option>
+                 {{/each}}
+            </select>
+            <label for="job">&nbsp;&nbsp;&nbsp;任务:</label>
+            <select name="job" id="job" class="job">
+		                <option>---Select---</option>
+                    {{#each jobs}}
+                        <option value="{{jobname}}">{{jobname}}</option>
+                    {{/each}}
+            </select>
+            <label for="search">&nbsp;&nbsp;&nbsp;</label>
+            <input type="text"  class="searchtext" name="search" placeholder="输入关键字"/>
+            <input type="button" class="searchbtn" value="搜索"/>
+        </form>
+	</center>
+  <br>
+  <br>
+  {{> joblist}}
+</template>
+
+<template name="joblist">
+    <ul>
+      {{#each jobitems}}
+        {{> jobitem}}
+      {{/each}}
+    </ul>
+</template>
